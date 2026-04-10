@@ -89,3 +89,69 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+/* my code is below */
+
+.container{
+  display: grid;
+  grid-template-rows: 100px 50px 1fr 50px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.header, .sidebar, .nav, .footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header{
+  grid-area: 1/1/2/-1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar{
+  grid-area: 2/1/-2/2;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav{
+  grid-area: 2/2/3/-1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.article{
+  grid-area: 3/2/-2/-1;
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(3, 1fr)/repeat(4,1fr);
+}
+
+.footer{
+  grid-area: 4/1/-1/-1;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  display: contents;
+}
+
+li{
+  list-style-type: none;
+}
+
+.menu{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 60%;
+}
+
+
+.photo, .side-content{
+  height: 13%;
+}
